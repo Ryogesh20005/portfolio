@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
-import axios from 'axios';
 
 const Contact = () => {
   const [formData, setFormData] = React.useState({ name: '', email: '', message: '' });
@@ -13,9 +12,19 @@ const Contact = () => {
     setLoading(true);
     setStatus({ type: null, msg: '' });
 
+    const encode = (data: any) => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    };
+
     try {
-      await axios.post('http://localhost:5000/api/contact', formData);
-      setStatus({ type: 'success', msg: 'Message sent successfully! Check your email.' });
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formData })
+      });
+      setStatus({ type: 'success', msg: 'Message sent successfully! I will get back to you soon.' });
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
       setStatus({ type: 'error', msg: 'Failed to send message. Please try again.' });
@@ -68,11 +77,15 @@ const Contact = () => {
           viewport={{ once: true }}
           onSubmit={handleSubmit}
           className="glass-card space-y-6"
+          name="contact"
+          data-netlify="true"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-400">Your Name</label>
             <input
               type="text"
+              name="name"
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -84,6 +97,7 @@ const Contact = () => {
             <label className="text-sm font-medium text-gray-400">Email Address</label>
             <input
               type="email"
+              name="email"
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -94,6 +108,7 @@ const Contact = () => {
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-400">Message</label>
             <textarea
+              name="message"
               required
               rows={4}
               value={formData.message}

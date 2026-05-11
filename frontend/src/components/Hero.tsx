@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero = ({ name, title }: HeroProps) => {
   const handleDownload = () => {
-    window.open('http://localhost:5000/api/resume/download', '_blank');
+    window.open('/yoshres.pdf', '_blank');
   };
 
   return (
