@@ -1,0 +1,78 @@
+{
+  "name": "YOGESH R",
+  "title": "Full Stack Developer",
+  "contact": {
+    "email": "bxryosh@gmail.com",
+    "phone": "+91-XXXXXXXXXX",
+    "location": "India",
+    "linkedin": "linkedin.com/in/yogesh-r",
+    "github": "github.com/Ryogesh20005"
+  },
+  "summary": "Passionate Full Stack Developer with expertise in modern web technologies. Experienced in building scalable web applications using Django, React, and Node.js. Strong problem-solving skills and a keen eye for detail.",
+  "skills": [
+    "Programming Languages: Python, JavaScript, HTML, CSS",
+    "Frameworks: Django, React, Node.js, Express.js",
+    "Databases: MySQL, PostgreSQL, MongoDB",
+    "Tools: Git, Docker, AWS, Linux",
+    "Other: REST APIs, GraphQL, Bootstrap, Tailwind CSS"
+  ],
+  "experience": [
+    {
+      "role": "Full Stack Developer",
+      "company": "Tech Company, India",
+      "duration": "2026",
+      "highlights": [
+        "Developed and maintained web applications using Django and React",
+        "Built RESTful APIs and integrated third-party services",
+        "Collaborated with cross-functional teams to deliver projects on time",
+        "Implemented responsive designs and optimized performance"
+      ]
+    },
+    {
+      "role": "Junior Developer",
+      "company": "Startup Company, India",
+      "duration": "Apr 2026 - Present",
+      "highlights": [
+        "Assisted in developing backend services with Node.js",
+        "Worked on frontend components using React",
+        "Participated in code reviews and agile development processes"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Hospital Management System",
+      "description": "Comprehensive web application for managing hospital operations",
+      "tech": "Built with Django, MySQL, and Bootstrap",
+      "image": "/hospital.png",
+      "features": [
+        "Features: Patient management, appointment scheduling, doctor profiles"
+      ]
+    },
+    {
+      "name": "Medical Chatbot",
+      "description": "AI-powered chatbot for medical information",
+      "tech": "Developed using Python and NLP libraries",
+      "image": "/hospital.png",
+      "features": [
+        "Provides instant responses and guidance"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology in Computer Science",
+      "university": "University Name, India",
+      "duration": "2026",
+      "details": [
+        "GPA: 8.5/10",
+        "Relevant Coursework: Data Structures, Algorithms, Web Development"
+      ]
+    }
+  ],
+  "certifications": [
+    "AWS Certified Developer - Associate",
+    "Python Programming Certification",
+    "React Developer Certification"
+  ]
+}
