@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { User, Code2, Database, Layout } from 'lucide-react';
+import { User } from 'lucide-react';
 
 interface AboutProps {
   summary: string;

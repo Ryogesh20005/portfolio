@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Phone, MapPin } from 'lucide-react';
+import { Send, Mail, MapPin } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = React.useState({ name: '', email: '', message: '' });

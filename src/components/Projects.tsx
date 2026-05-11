@@ -6,6 +6,7 @@ interface ProjectItem {
   description: string;
   tech: string;
   features: string[];
+  image?: string;
 }
 
 interface ProjectsProps {
